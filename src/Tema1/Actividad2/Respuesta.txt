@@ -1,0 +1,1 @@
+Salta el error = 2 de IOException, puesto que no encuentra la ruta
