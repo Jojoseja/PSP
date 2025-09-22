@@ -1,22 +1,37 @@
 package Tema1.Actividad3;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class GenerarSuma {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         try {
-            Process p = Runtime.getRuntime().exec("java -cp out/production/PSP Tema1.Actividad3.SumaNumeros");
-            InputStreamReader isr = new InputStreamReader(p.getInputStream());
+            ProcessBuilder p = new ProcessBuilder("java", "SumaNumeros");
+            Process p1 = p.start();
 
-            BufferedReader br = new BufferedReader(isr);
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(p1.getOutputStream()));
+            BufferedReader br = new BufferedReader(new InputStreamReader(p1.getInputStream()));
+            bw.write(sc.nextInt() + "\n" );
+            bw.write(sc.nextInt() + "\n" );
+            sc.close();
+            bw.flush();
+            bw.close();
 
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                System.out.println(linea);
+            String line;
+            System.out.println("Output");
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
             }
 
+            p1.waitFor();
+
+            System.out.println(p1.exitValue());
             br.close();
+
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
