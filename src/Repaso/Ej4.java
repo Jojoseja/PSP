@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Ej4 {
     public static void main(String[] args) {
-        Alumno al01 = new Alumno("Alberto", 6.5f);
-        Alumno al02 = new Alumno("Antonio", 6.5f);
-        Alumno al03 = new Alumno("Alvaro", 6.5f);
-        Alumno al04 = new Alumno("Alejandro", 6.5f);
-        Alumno al05 = new Alumno("Alicia", 6.5f);
-        Alumno al06 = new Alumno("Ana", 6.5f);
+        Alumno al01 = new Alumno("Maria", 10f);
+        Alumno al02 = new Alumno("José", 5);
+        Alumno al03 = new Alumno("Juan", 8);
+        Alumno al04 = new Alumno("Laura", 7);
+        Alumno al05 = new Alumno("Francisco", 4);
+        Alumno al06 = new Alumno("Ana", 5);
 
-        ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+        ArrayList<Alumno> alumnos = new ArrayList<>();
 
         alumnos.add(al01);
         alumnos.add(al02);
@@ -21,7 +21,7 @@ public class Ej4 {
         alumnos.add(al06);
 
 
-        System.out.println(mediaAlumnos(alumnos));
+        System.out.println("La media total es de: " + mediaAlumnos(alumnos));
     }
     public static float mediaAlumnos(ArrayList<Alumno> alumnos) {
         float total_sum = 0f;
@@ -29,7 +29,7 @@ public class Ej4 {
 
         for  (Alumno alumno : alumnos) {
             total_sum += alumno.media;
-            out += alumno.nombre + " ";
+            out += alumno.nombre + " " + alumno.media + "\n";
         }
         System.out.println(out);
 
@@ -37,6 +37,7 @@ public class Ej4 {
 
     }
 
+    //Clase alumno con atributo String nombre y float media
     public static class Alumno {
         private String nombre;
         private float media;

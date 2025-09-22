@@ -10,12 +10,6 @@ public class Ej3 {
         //Objeto array para almacenar datos
         int[] lista = new int[10];
 
-        //Introducir datos en la array
-        lista[0] = 1;
-        lista[1] = 3;
-        lista[2] = 5;
-        lista[3] = 7;
-        lista[4] = 9;
 
         while (lista[9] == 0) {
             int input = sc.nextInt();
