@@ -7,19 +7,27 @@ import java.util.List;
 public class Ayuda1 {
     public static void main(String[] args) {
         try {
-            ProcessBuilder pb = new ProcessBuilder("java", "-version");
+            ProcessBuilder pb = new ProcessBuilder("java", "Ayudas.Procesos.HelloWorld");
 
-            File input = new File("src/Ayudas/Procesos/Hola.txt");
-            File output = new File("src/Ayudas/Procesos/Adios.txt");
-            pb.redirectInput(input);
-            pb.redirectOutput(output);
+            File file = new File("out/production/PSP");
+
+            pb.directory(file);
 
             Process p = pb.start();
 
-            
+            BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            int exitCode =  p.waitFor();
+
+            System.out.println(exitCode);
+
+
+        } catch (Exception e) {
+            System.out.println("ERROR: " + e.getMessage());
         }
     }
 }

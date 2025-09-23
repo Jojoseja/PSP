@@ -1,6 +1,5 @@
 package Tema1.Actividad3;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SumaNumeros {
