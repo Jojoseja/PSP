@@ -8,6 +8,8 @@ public class Ejercicio4 {
         System.out.println(os);
 
         Scanner sc = new Scanner(System.in);
+
+        //TODO Completar switch case con las opciones apagado, suspender y reiniciar. Más adelante añadir tiempo de "espera" (sleep)
         while (true) {
             try {
                 String input = sc.nextLine();
