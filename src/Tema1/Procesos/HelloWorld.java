@@ -1,4 +1,4 @@
-package Ayudas.Procesos;
+package Tema1.Procesos;
 
 import java.util.Scanner;
 

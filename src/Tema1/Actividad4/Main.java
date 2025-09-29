@@ -21,7 +21,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-
         ProcessBuilder pb =  new ProcessBuilder("java", "Tema1.Actividad4.LeerNombre", input);
         Path path = Path.of("out", "production", "PSP");
         File f = new File(path.toString());
@@ -30,14 +29,10 @@ public class Main {
         //Archivo Salida
         Path pSal = Path.of("src", "Tema1", "Actividad4", "salida.txt");
         File fSal = new  File(pSal.toString());
-        System.out.println(fSal.exists());
 
         //Archivo Error
         Path pErr = Path.of("src", "Tema1", "Actividad4", "error.txt");
         File fErr = new  File(pErr.toString());
-        System.out.println(fErr.exists());
-
-
 
         try {
             Process p = pb.start();

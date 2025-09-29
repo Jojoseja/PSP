@@ -1,13 +1,11 @@
-package Ayudas.Procesos;
+package Tema1.Procesos;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Ayuda1 {
     public static void main(String[] args) {
         try {
-            ProcessBuilder pb = new ProcessBuilder("java", "Ayudas.Procesos.HelloWorld");
+            ProcessBuilder pb = new ProcessBuilder("java", "Tema1.Procesos.HelloWorld");
 
             File file = new File("out/production/PSP");
 
