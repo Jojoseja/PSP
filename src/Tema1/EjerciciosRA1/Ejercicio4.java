@@ -25,8 +25,8 @@ public class Ejercicio4 {
                             pb.command().add("/s");
 
                             System.out.println(Arrays.toString(pb.command().toArray()));
-                        } if  (os.contains("Linux")) {
-                            pb.command().add(0, "sh");
+                        } if (os.contains("Linux")) {
+                            pb.command().add(0, "sudo");
                             pb.command().add("poweroff");
 
                     }
