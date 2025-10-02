@@ -8,10 +8,8 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         String os = System.getProperty("os.name");
         System.out.println(os);
-
         Scanner sc = new Scanner(System.in);
-
-        //TODO Completar switch case con las opciones apagado, reiniciar y suspender. Más adelante añadir tiempo de "espera" (sleep)
+        //TODO-1 Completar switch case con las opciones apagado, reiniciar y suspender. Más adelante añadir tiempo de "espera" (sleep)
         while (true) {
             try {
                 System.out.println("1. Apagar, 2. Reiniciar, 3. Suspender");
@@ -20,24 +18,31 @@ public class Ejercicio4 {
                 switch (input){
                     case "1": //Apagar
                         if (os.contains("Windows")) {
-                            pb.command().add(0, "cmd");
+                            pb.command().set(0, "cmd");
                             pb.command().add("shutdown");
                             pb.command().add("/s");
-
-                            System.out.println(Arrays.toString(pb.command().toArray()));
                         } if (os.contains("Linux")) {
-                            pb.command().add(0, "sudo");
-                            pb.command().add("poweroff");
-
-                    }
+                            pb.command().set(0, "poweroff");
+                        }
                         break;
                     case "2": //Reiniciar
+                        if (os.contains("Windows")) {
+                            pb.command().set(0, "cmd");
+                            pb.command().add("");
+                        } if (os.contains("Linux")) {
+                            pb.command().set(0, "reboot");
+                        }
                         break;
                     case "3": //Suspender
+                        if  (os.contains("Linux")) {
+                            pb.command().set(0, "sudo");
+                            pb.command().add("systemctl");
+                            pb.command().add("suspend");
+                        }
                         break;
                     default:
-
                 }
+                System.out.println(Arrays.toString(pb.command().toArray()));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 sc.next();
