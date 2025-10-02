@@ -13,15 +13,19 @@ public class Ejercicio4 {
         while (true) {
             try {
                 String input = sc.nextLine();
+                System.out.println("1. Apagado, 2. Suspender, 3. Reiniciar");
                 switch (input){
                     case "1":
+                        System.out.println("0 Para ejecutar el comando directamente, en su defecto especificar el tiempo: ");
+                        int tiempo = sc.nextInt();
+                        if (os.contains("Windows")) {
+                        }
                         break;
                     case "2":
                         break;
                     case "3":
                         break;
                     default:
-
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
