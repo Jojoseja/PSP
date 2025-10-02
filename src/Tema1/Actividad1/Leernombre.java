@@ -1,27 +1,20 @@
 package Tema1.Actividad1;
 
-public class Leernombre {
+import java.util.regex.Pattern;
+
+public class LeerNombre {
     public static void main(String[] args) {
-        try {
-            Process p = Runtime.getRuntime().exec("java -cp out/production/PSP Tema1.Actividad1.LeerNombre hola");
 
-            /*
-            InputStreamReader isr = new InputStreamReader(p.getInputStream());
+        String name = args[0];
 
-            BufferedReader br = new BufferedReader(isr);
+        boolean output = Pattern.matches("[a-zA-Z ]+", name);
 
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                System.out.println(linea);
-            }
-
-            br.close();
-            */
-            System.out.println(p.waitFor());
-
-            System.out.println(p.exitValue());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        if (output) {
+            System.out.println("Si");
+            System.exit(0);
+        } else {
+            System.out.println("No");
+            System.exit(-1);
         }
     }
 }
