@@ -7,7 +7,6 @@ import java.io.InputStream;
 public class Ejemplo03 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		//creamos objeto File al directorio donde est� Ejemplo2
         File d = new File("out/production/PSP");
         //proceso a ejecutar es Ejemplo2
