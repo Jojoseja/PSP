@@ -11,11 +11,8 @@ public class ProcesoHijo {
     public static void main(String[] args) {
         //Este proceso va a recibir como argumento el nombre del archivo a abrir
         String archivo = args[0];
-        String fileType = ".txt";
 
-        String lastVar = archivo + fileType;
-
-        Path path = Path.of("src", "Tema1", "Ejercicio7", lastVar);
+        Path path = Path.of("src", "Tema1", "Ejercicio7", archivo);
         File file = path.toFile();
 
         int contador = 0;
