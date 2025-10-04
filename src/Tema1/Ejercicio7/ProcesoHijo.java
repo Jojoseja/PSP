@@ -10,10 +10,10 @@ import java.nio.file.Path;
 public class ProcesoHijo {
     public static void main(String[] args) {
         //Este proceso va a recibir como argumento el nombre del archivo a abrir
-        String archivo = args[0];
+        String route = args[0];
 
-        Path path = Path.of("src", "Tema1", "Ejercicio7", archivo);
-        File file = path.toFile();
+
+        File file = new File(route);
 
         int contador = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
