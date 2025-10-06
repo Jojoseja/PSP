@@ -18,7 +18,7 @@ public class Ejercicio1 {
                         divisores.add(i);
                     }
                 }
-                System.out.println("Total de Divisores: " + divisores.size());
+                System.out.println("Total de Divisores: " + divisores.size() + divisores);
             }
 
 
