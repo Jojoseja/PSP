@@ -1,9 +1,8 @@
-package Tema1.Ejercicio7;
+package Tema1.EjerciciosRA1.Ejercicio7;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.nio.file.Path;
 
 
 //Esta clase sirve para devolver la suma de los numeros de un documento que se pase como parámetro

@@ -9,7 +9,7 @@ public class Ejercicio4 {
         String os = System.getProperty("os.name");
         System.out.println(os);
         Scanner sc = new Scanner(System.in);
-        //TODO-1 Completar switch case con las opciones apagado, reiniciar y suspender. Más adelante añadir tiempo de "espera" (sleep)
+        //Completar switch case con las opciones apagado, reiniciar y suspender. Más adelante añadir tiempo de "espera" (sleep)
         while (true) {
             try {
                 System.out.println("1. Apagar, 2. Reiniciar, 3. Suspender");

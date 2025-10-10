@@ -1,4 +1,4 @@
-package Tema1.Ejercicio7;
+package Tema1.EjerciciosRA1.Ejercicio7;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.file.Path;
@@ -30,7 +30,7 @@ public class Ejercicio7 {
             String stVentas = paVentas.toString();
 
 
-            ProcessBuilder pb1 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.Ejercicio7.ProcesoHijo", stFinanzas);
+            ProcessBuilder pb1 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.EjerciciosRA1.Ejercicio7.ProcesoHijo", stFinanzas);
             Process p1 = pb1.start();
             try (BufferedReader br1 = new BufferedReader(new InputStreamReader(p1.getInputStream()))) {
                 String line;
@@ -43,7 +43,7 @@ public class Ejercicio7 {
             }
 
 
-            ProcessBuilder pb2 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.Ejercicio7.ProcesoHijo", stMarketing);
+            ProcessBuilder pb2 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.EjerciciosRA1.Ejercicio7.ProcesoHijo", stMarketing);
             Process p2 = pb2.start();
             try (BufferedReader br2 = new BufferedReader(new InputStreamReader(p2.getInputStream()))) {
                 String line;
@@ -55,7 +55,7 @@ public class Ejercicio7 {
                 System.out.println("Error: " + e.getMessage());
             }
 
-            ProcessBuilder pb3 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.Ejercicio7.ProcesoHijo", stPersonal);
+            ProcessBuilder pb3 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.EjerciciosRA1.Ejercicio7.ProcesoHijo", stPersonal);
             Process p3 = pb3.start();
 
 
@@ -69,7 +69,7 @@ public class Ejercicio7 {
                 System.out.println("Error: " + e.getMessage());
             }
 
-            ProcessBuilder pb4 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.Ejercicio7.ProcesoHijo", stSistemas);
+            ProcessBuilder pb4 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.EjerciciosRA1.Ejercicio7.ProcesoHijo", stSistemas);
             Process p4 = pb4.start();
 
             try (BufferedReader br4 = new BufferedReader(new InputStreamReader(p4.getInputStream()))) {
@@ -82,7 +82,7 @@ public class Ejercicio7 {
                 System.out.println("Error: " + e.getMessage());
             }
 
-            ProcessBuilder pb5 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.Ejercicio7.ProcesoHijo", stVentas);
+            ProcessBuilder pb5 =  new ProcessBuilder("java", "-cp", "out/production/PSP", "Tema1.EjerciciosRA1.Ejercicio7.ProcesoHijo", stVentas);
             Process p5 = pb5.start();
 
 

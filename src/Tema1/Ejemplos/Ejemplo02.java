@@ -6,7 +6,6 @@ import java.io.InputStream;
 public class Ejemplo02 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		//Ejecutamos el proceso DIR
         Process p = new ProcessBuilder("ls","/home/jojo").start();
         

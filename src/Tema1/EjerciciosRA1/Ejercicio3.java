@@ -37,9 +37,7 @@ public class Ejercicio3 {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        } finally {
-            return line;
         }
-
+        return line;
     }
 }
